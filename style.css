@@ -8,6 +8,8 @@ body {
   background-position: center;
   text-align: center;
   padding: 2rem 1rem;
+  min-height: 100vh;
+  background-attachment: fixed;
 }
 
 header {
