@@ -2,9 +2,9 @@
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  background-color: #f9f9f9;
-  background-image: 'background.jpg';
-  color: #111;
+  background: url('background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #ffffff;
   text-align: center;
   padding: 2rem 1rem;
 }
