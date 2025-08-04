@@ -6,7 +6,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  text-align: center;
+  text-align: left;
   padding: 2rem 1rem;
   min-height: 100vh;
   background-attachment: fixed;
@@ -14,6 +14,8 @@ body {
 
 header {
   padding: 1rem 0;
+  text-align: center;
+  
 }
 
 h1 {
@@ -40,12 +42,17 @@ li {
   margin: 0.5rem 0;
 }
 
+.sidebar ul li i {
+  margin-right: 10px;
+  color: #555;
+}
+
 .card {
   text-align: left;
   background: #fff;
   margin: 1.5rem auto;
   padding: 2rem;
-  max-width: 500px;
+  max-width: 70%;
   border-radius: 24px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.84);
   transition: all 0.3s ease;
@@ -63,11 +70,19 @@ li {
   left: -220px; /* Hide sidebar by default */
   top: 0;
   height: 100%;
+  border-radius: 28px;
   padding: 1rem;
   background: #fff;
-  box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+  box-shadow: 10px 10px 10px rgba(0,0,0,0.1);
   transition: left 0.3s ease;
   z-index: 1000;
+}
+
+.sidebar h2{
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 1rem;
+  text-align: center;
 }
 
 .sidebar.active {
@@ -101,21 +116,19 @@ li {
 
 a {
   display: inline-block;
-  margin-top: 1rem;
-  padding: 0.75rem 1.5rem;
-  background: #000000;
-  color: white;
+  color: black;
   text-decoration: none;
-  border-radius: 16px;
   font-weight: 500;
   transition: 0.3s ease;
 }
 
 a:hover {
-  background:rgb(255, 132, 0);
+  color:rgb(255, 132, 0);
 }
 
 footer {
+  text-align: center;
+  padding: 1rem;
   margin-top: 3rem;
   font-size: 0.9rem;
   color: #aaa;
