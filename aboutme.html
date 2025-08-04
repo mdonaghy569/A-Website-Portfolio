@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Me - Marco Donaghy</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="hoverArea"></div>
+  <button id="sidebarToggle" class="menu-btn" aria-label="Open menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <div class="sidebar">
+    <h2>Menu</h2>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="aboutme.html">About Me</a></li>
+      <li><a href="#">Projects</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </div>
+
+<img src="images/profile.jpg" alt="Profile" class="profile-img" />
+
+  <header>
+    <h1>About Me</h1>
+    <p>Get to know Marco Donaghy</p>
+  </header>
+
+
+  <section class="card">
+    <h2>👋 Hello!</h2>
+    <p>
+      I'm Marco Donaghy, a design-driven developer passionate about creating beautiful, functional web experiences. I enjoy blending creativity with code to build projects that are both visually appealing and user-friendly.
+    </p>
+    <h2>💡 Skills & Interests</h2>
+    <ul style="text-align:left; max-width:400px; margin:0 auto;">
+      <li>Front-End Development (HTML, CSS, JavaScript)</li>
+      <li>UI/UX Design</li>
+      <li>Responsive Web Design</li>
+      <li>Creative Coding</li>
+      <li>Continuous Learning</li>
+    </ul>
+    <h2>🌱 Currently Learning</h2>
+    <p>
+      Exploring new frameworks, improving accessibility, and experimenting with interactive web components.
+    </p>
+    <h2>📫 Let's Connect</h2>
+    <p>
+      Feel free to reach out via <a href="mailto:mdonaghy569@gmail.com">email</a> or <a href="https://www.linkedin.com/in/marco-donaghy/">LinkedIn</a> if you have any questions or want to collaborate on a project.
+    </p>
+  </section>
+  <footer>
+    <p>© 2025 Marco Donaghy. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const sidebar = document.querySelector('.sidebar');
+    const toggleBtn = document.getElementById('sidebarToggle');
+    const hoverArea = document.getElementById('hoverArea');
+
+    toggleBtn.onclick = () => {
+      sidebar.classList.toggle('active');
+      toggleBtn.classList.toggle('active');
+    };
+
+    hoverArea.addEventListener('mouseenter', () => {
+      sidebar.classList.add('active');
+      toggleBtn.classList.add('active');
+    });
+
+    sidebar.addEventListener('mouseleave', () => {
+      sidebar.classList.remove('active');
+      toggleBtn.classList.remove('active');
+    });
+  </script>
+</body>

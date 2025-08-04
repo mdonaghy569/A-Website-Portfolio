@@ -5,8 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Programming Portfolio</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
+  <div id="hoverArea"></div>
+  <button id="sidebarToggle" class="menu-btn" aria-label="Open menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <div class="sidebar">
+    <h2>Menu</h2>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="aboutme.html">About Me</a></li>
+      <li><a href="#">Projects</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </div>
+
+  <img src="images/profile.jpg" alt="Profile" class="profile-img" />
+
   <header>
     <h1>Marco Donaghy</h1>
     <p>Design-Driven Developer</p>
@@ -26,6 +45,27 @@
   <footer>
     <p>© 2025 Marco Donaghy. All rights reserved.</p>
   </footer>
+
+  <script>
+    const sidebar = document.querySelector('.sidebar');
+    const toggleBtn = document.getElementById('sidebarToggle');
+    const hoverArea = document.getElementById('hoverArea');
+
+    toggleBtn.onclick = () => {
+      sidebar.classList.toggle('active');
+      toggleBtn.classList.toggle('active');
+    };
+
+    hoverArea.addEventListener('mouseenter', () => {
+      sidebar.classList.add('active');
+      toggleBtn.classList.add('active');
+    });
+
+    sidebar.addEventListener('mouseleave', () => {
+      sidebar.classList.remove('active');
+      toggleBtn.classList.remove('active');
+    });
+  </script>
 </body>
 </html>
 
