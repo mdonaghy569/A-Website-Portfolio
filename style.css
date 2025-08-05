@@ -27,6 +27,8 @@ h1 {
 
 h2 {
   font-size: 1.5rem;
+  font-style: unset;
+  font-weight: 400;
   color: #333;
   margin: 0.5rem 0;
 }
@@ -64,13 +66,75 @@ li {
   box-shadow: 0 15px 40px rgb(255, 132, 0);
 }
 
+.cards-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.project-card {
+  text-align: center;
+  padding-bottom: 1rem;
+  background: #fff;
+  margin: 2rem auto;
+  height: 500px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.84);
+  transition: all 0.3s ease;
+  flex: 1 1 200px;
+}
+
+.project-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 40px rgb(255, 132, 0);
+}
+.project-card img {
+  text-align: center;
+  max-width: 100%;
+  height: 50%;
+  border-top-right-radius: 16px;
+  border-top-left-radius: 16px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.project-card h2 {
+  font-size: 1.8rem;
+  padding: 0.5rem 0;
+  color: #333;
+  margin-top: 1rem;
+}
+
+.project-card p {
+  font-size: 1.1rem;
+  padding: 0 2rem;
+  color: #666;
+  margin-top: 0.5rem;
+}
+
+.project-card-a {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background: rgb(255, 132, 0);
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+} 
+
+
 .sidebar {
   width: 200px;
   position: fixed;
   left: -220px; /* Hide sidebar by default */
   top: 0;
   height: 100%;
-  border-radius: 28px;
+  border-top-right-radius:28px;
+  border-bottom-right-radius: 28px;
   padding: 1rem;
   background: #fff;
   box-shadow: 10px 10px 10px rgba(0,0,0,0.1);
@@ -185,8 +249,8 @@ footer {
   position: fixed;
   top: 1rem;
   right: 1rem;
-  width: 256px;
-  height: 256px;
+  width: 190px;
+  height: 190px;
   object-fit: cover;
   border-radius: 50%;
   box-shadow: 0 2px 8px rgba(0,0,0,0.12);
