@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Android App Info - Marco Donaghy</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div id="hoverArea"></div>
+  <button id="sidebarToggle" class="menu-btn" aria-label="Open menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <div class="sidebar">
+    <h2>Menu</h2>
+    <ul>
+      <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+      <li><a href="aboutme.html"><i class="fas fa-user"></i> About Me</a></li>
+      <li><a href="whatido.html"><i class="fas fa-cogs"></i> What I Do</a></li>
+    </ul>
+  </div>
+
+  <img src="images/profile.jpg" alt="Profile" class="profile-img" />
+
+  <header>
+    <h1>My Android App</h1>
+    <p>Details & Features</p>
+  </header>
+
+  <section class="card">
+  <h2>Overview</h2>
+  <p>
+    My Event Manager Android app is designed to help users efficiently organize, track, and manage their events and tasks. The app provides a streamlined experience for creating new events, setting reminders, and viewing upcoming activities in a clear and intuitive interface. Built with <strong>Java</strong> and <strong>Kotlin</strong> using <strong>Android Studio</strong>, the app leverages <strong>Material Design</strong> for a modern look and feel.
+  </p>
+  <ul>
+    <li><strong>Event Creation:</strong> Users can quickly add new events with details such as title, description, date and time.</li>
+    <li><strong>Reminders & Notifications:</strong> Integrated notification system ensures users never miss an important event or deadline.</li>
+    <li><strong>Event List & Calendar View:</strong> Events are displayed in a list format, making it easy to visualize upcoming tasks.</li>
+    <li><strong>Editing & Deleting:</strong> Users can edit or remove events as needed, keeping their schedule up to date.</li>
+    <li><strong>Data Persistence:</strong> All event data is stored securely using local storage and can be synced with Firebase for backup and multi-device access.</li>
+    <li><strong>User Authentication:</strong> Optional login system allows users to protect their event data and access it from multiple devices.</li>
+    <li><strong>Accessibility:</strong> Designed with accessibility in mind, including support for screen readers and high-contrast modes.</li>
+  </ul>
+</section>
+
+<section class="card">
+  <h2>Technologies Used</h2>
+  <p>
+    My Event Manager Android app is built using modern Android development tools and best practices to deliver a robust, user-friendly experience. The project demonstrates proficiency in both <strong>Kotlin</strong> and <strong>Java</strong>, following <strong>Material Design</strong> guidelines for a polished interface.
+  </p>
+  <ul>
+    <li><strong>Android Studio:</strong> Main IDE for development, debugging, and UI design.</li>
+    <li><strong>Kotlin & Java:</strong> Core programming languages for app logic and UI components.</li>
+    <li><strong>Material Design:</strong> Ensures a modern, consistent, and accessible user interface with support for dark/light themes.</li>
+    <li><strong>Fragments & Navigation Component:</strong> Modular UI and seamless navigation between screens.</li>
+    <li><strong>RecyclerView & Custom Adapters:</strong> Efficiently displays and manages lists of events.</li>
+    <li><strong>ViewBinding:</strong> Safe and efficient access to UI elements.</li>
+    <li><strong>SharedPreferences:</strong> Persistent storage for user settings and preferences.</li>
+    <li><strong>ItemTouchHelper & Swipe Gestures:</strong> Enables quick edit/delete actions on events.</li>
+    <li><strong>AlertDialog:</strong> Provides intuitive event editing interfaces.</li>
+    <li><strong>Vector Drawables & Material Icons:</strong> Scalable, consistent icons for improved UX.</li>
+    <li><strong>BroadcastReceiver:</strong> Handles event reminders and notifications in the background.</li>
+  </ul>
+</section>
+
+  <section class="card">
+  <h2>What I Did</h2>
+  <p>
+    For my Android development coursework, I designed and built a fully functional mobile app using <strong>Java</strong> and <strong>Kotlin</strong> in <strong>Android Studio</strong>. The project focused on implementing modern <strong>Material Design</strong> principles for a clean and intuitive user experience.
+  </p>
+  <ul>
+    <li>Set up project structure and version control using <a href="https://github.com/LiverpoolHopeUni/android-development-coursework-2025-marcodonaghy1" target="_blank">GitHub</a></li>
+    <li>Developed core features including user authentication, data storage, and responsive layouts</li>
+    <li>Integrated Firebase for backend services and push notifications</li>
+    <li>Applied best practices for UI/UX and accessibility</li>
+    <li>Tested and debugged the app to ensure reliability and performance</li>
+    <li>Documented the code and project workflow in the repository's README</li>
+  </ul>
+  <p>
+    You can view the full source code and documentation on my <a href="https://github.com/LiverpoolHopeUni/android-development-coursework-2025-marcodonaghy1" target="_blank">GitHub repository</a>.
+  </p>
+</section>
+
+  <footer>
+    <p>© 2025 Marco Donaghy. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const sidebar = document.querySelector('.sidebar');
+    const toggleBtn = document.getElementById('sidebarToggle');
+    const hoverArea = document.getElementById('hoverArea');
+
+    toggleBtn.onclick = () => {
+      sidebar.classList.toggle('active');
+      toggleBtn.classList.toggle('active');
+    };
+
+    hoverArea.addEventListener('mouseenter', () => {
+      sidebar.classList.add('active');
+      toggleBtn.classList.add('active');
+    });
+
+    sidebar.addEventListener('mouseleave', () => {
+      sidebar.classList.remove('active');
+      toggleBtn.classList.remove('active');
+    });
+  </script>
+</body>
